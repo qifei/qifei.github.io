@@ -15,10 +15,8 @@ body {
 	background-color: #444;
 }
 #container {
-	max-width: 1000px;
-	min-width: 480px;
-	width: 800px;
-	margin: auto;
+	margin: 0;
+	padding: 0.1px 0;
 }
 
 .book-page {
@@ -29,6 +27,7 @@ body {
 	margin: 10px auto;
 	box-shadow: 0px 0px 10px #000;
 	position: relative;
+	box-sizing: content-box;
 }
 
 #cover {
@@ -197,4 +196,139 @@ body {
 }
 .page-content p {
 	margin: 1em 0 1.5em;
+}
+.section-title {
+	font-family: sans-serif;
+	font-size: 1.0em;
+	font-weight: bold;
+	color: #666;
+	margin: 1em 0 1em;
+	line-height: 1.6em;
+	border-bottom: 1px solid #ccc;
+}
+
+
+.photos li {
+	float: left;
+	width: 100px;
+	height: 100px;
+	padding: 6px;
+	margin: 0 8px 8px 0;
+	border: 1px solid #ddd;
+	box-shadow: 4px 4px 3px #ccc;
+}
+.photos li:last-child {
+	margin-right: 0;
+}
+.photos li > img {
+	max-width: 100%;
+	max-height: 100%;
+}
+.photos::after {
+	content: ".";
+	display: block;
+	line-height: 0;
+	height: 0;
+	overflow: hidden;
+	width: 100%;
+	clear: both;
+	background-color: #f00;
+}
+
+#test20160520 p:lang(zh-cn) {
+	color: #f00;
+}
+#test20160520 h2 ~ p {
+	background-color: #eee;
+	color: #f60;
+	line-height: 1.4em;
+}
+
+#test20160520 h2 ~ p::selection {
+	color: #fff;
+	background-color: #000;
+}
+#test20160520 h2 ~ p::-moz-selection {
+	color: #fff;
+	background-color: #000;
+}
+#test20160520 .photos li:hover {
+	transform: scale(1.1);
+	transition: all 0.2s ease-in 0.1s;
+}
+#test20160520 .photos li > img[src*=animal] {
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+}
+#test20160520 .photos li > img[src$=gif] {
+	transform-origin: 50px 50px;
+	transform: rotate(45deg);
+}
+
+@media all and (min-width:480px) and (max-width:1280px) {
+	#test201605202 h2 strong:before {
+		content: "480px ~ 1280px";
+	}
+}
+@media all and (min-width:1281px) and (max-width:2560px) {
+	#test201605202 h2 strong:before {
+		content: "1280px ~ 2560px";
+	}
+}
+#test201605202 .page-content p:first-letter {
+	font-size: 300%;
+}
+#test201605202 div:empty {
+	border: 1px solid #0f0;
+}
+#test201605202 div:empty:after {
+	content: "This was a EMPTY cell";
+	color: #999;
+	text-shadow: 0 0 3px #f60;
+}
+#test201605202 .photos li:nth-child(2) {
+	background-color: #ddd;
+}
+#test201605202 .photos li:hover {
+	transform: translate(0px, -10px);
+	transition: all 0.2s ease-in 0.1s;
+}
+#test201605202 .photos li:hover {
+	transform: translate(0px, -10px);
+}
+
+#test201605202 form input:enabled ~ span {
+	background-color: #0d0;
+	color: #fff;
+}
+#test201605202 form input:enabled ~ span:after {
+	content: "ENABLED";
+}
+#test201605202 form input:disabled ~ span {
+	background-color: #999;
+	color: #fff;
+}
+#test201605202 form input:disabled ~ span:after {
+	content: "DISABLED";
+}
+#test201605202 form input:checked ~ span {
+	background-color: #fc3;
+	color: #000;
+}
+#test201605202 form input:checked ~ span:after {
+	content: "CHECKED";
+}
+#test201605202 form textarea {
+	width: 100%;
+	resize: vertical;
+	min-height: 3em;
+	max-height: 10em;
+	height: 6em;
+}
+#test201605202 form textarea:focus {
+	background-color: #cff;
+}
+#test201605202 form textarea:empty:after {
+	content: "Input some words";
+	color: #f60;
 }
