@@ -4,7 +4,7 @@
 
 @font-face{
 	font-family: bookTitle;
-	src: url("edition.ttf");
+	src: url("UniversLTStd-LightUltraCn.otf");
 }
 @font-face{
 	font-family: bookDescription;
@@ -20,9 +20,9 @@ body {
 }
 
 .book-page {
-	width: 480px;
+	width: 520px;
 	height: 800px;
-	padding: 60px 80px;
+	padding: 60px 60px;
 	background-color: #fff;
 	margin: 10px auto;
 	box-shadow: 0px 0px 10px #000;
@@ -38,25 +38,29 @@ body {
 }
 
 .book-title {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 5.2em;
+	font-family: bookTitle, Arial, Helvetica, sans-serif;
+	font-size: 9.4em;
 	font-weight: normal;
-	line-height: 0.85em;
+	line-height: 0.82em;
+	letter-spacing: -6;
+	word-spacing: 0.04em;
+	white-space: pre-wrap;
 	text-transform: uppercase;
 	text-align: left;
 	color: #2B2E34;
-	width: 6em;
+	width: auto;
 	font-stretch: ultra-condensed;
 	padding-top: 100px;
 }
 #cover .book-title {
 	padding-top: 440px;
+	color: #fff;
 }
 .book-title em:nth-child(1){
 	color: #87C846;
 }
 #cover .book-title em:nth-child(1){
-	color: #fff;
+	color: #2B2E34;
 }
 .book-author {
 	font-family: Georgia, "Times New Roman", Times, serif;
@@ -66,9 +70,9 @@ body {
 	padding-bottom: 20px;
 	border-bottom: 2px solid #444;
 	position: absolute;
-	left: 80px;
+	left: 60px;
 	top: 80px;
-	width: 480px;
+	width: 520px;
 }
 #cover .book-author {
 	top: 430px;
