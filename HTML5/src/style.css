@@ -39,10 +39,10 @@ body {
 
 .book-title {
 	font-family: bookTitle, Arial, Helvetica, sans-serif;
-	font-size: 9.4em;
+	font-size: 9em;
 	font-weight: normal;
 	line-height: 0.82em;
-	letter-spacing: -6;
+	letter-spacing: -0.04em;
 	word-spacing: 0.04em;
 	white-space: pre-wrap;
 	text-transform: uppercase;
