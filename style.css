@@ -2,7 +2,6 @@
 @import url("eif.css");
 /* CSS Document */
 
-<!--
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -56,10 +55,10 @@ table {
 
 body {
 	color: #000;
-	background-color: #e8e8e8;
+	background-color: #F0EFEB;
 	margin: 0px;
 	padding: 0px;
-	font-family: Arial, Helvetica, sans-serif;
+	font-family: "Helvetica Neue", Helvetica, Geneva, Arial, sans-serif;
 	font-size: 1em;
 	line-height: 1;
 }
@@ -67,13 +66,26 @@ img {
 	border: none;
 }
 .box {
+	position: absolute;
+	top: 30%;
+	left: 50%;
 	text-align: center;
 	padding: 20px 0px;
-	margin: 100px auto auto;
+	margin: -150px auto auto -160px;;
 	width: 320px;
 	background-color: #FFFFFF;
 	border-radius: 2%;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+	animation: flyin 1.0s ease-out 0.2s;
+}
+@keyframes flyin {
+	from { top:-50%; margin-top:-300px; }
+}
+@media all and (max-height:500px) {
+	.box {
+		position: static;
+		margin: 0 auto;
+	}
 }
 h1.title {
 	font-size: 36px;
@@ -89,12 +101,24 @@ h1.title {
 	border-radius: 50%;
 	overflow: hidden;
 }
+.avatar {
+	display: block;
+	width: 256px;
+	filter: grayscale(0.5);
+	transform: translate(-128px, 0);
+	transition: all 0.2s ease-in 0.1s;
+}
+.avatar:hover {
+	filter: grayscale(0.0);
+	transform: translate(0, 0);
+	transition: all 0.2s ease-in 0.1s;
+}
 .avatar b, .avatar i {
 	display: inline-block;
 	width:128px;
 	height: 128px;
 	border-radius: 50%;
-	background-size: contain;
+	background-size: cover;
 }
 .avatar b {
 	background-image:url(images/photo.jpg);
@@ -102,45 +126,112 @@ h1.title {
 .avatar i {
 	background-image:url(images/cat.png);
 }
-.avatar {
-	display: block;
-	width: 256px;
-	filter: grayscale(0.5);
-	transform: translate(-128px, 0px);
-	transition: all 0.2s ease-in 0.1s;
-}
-.avatar:hover {
-	filter: grayscale(0.0);
-	transform: translate(0px, 0px);
-	transition: all 0.2s ease-in 0.1s;
+
+.notice {
+	height: 1em;
+	padding: 1em 0px;
+	justify-content: center;
 }
 
-p.notice {
-	font-family: Geneva, Arial, Helvetica, sans-serif;
-	font-size: 12px;
+.notice p {
+	font-family: "Courier New", Courier, monospace;
+	font-size: 0.6;
 	color: #999;
-	margin: 0px;
-	padding: 10px 0px;
+	margin: 0 auto;
+	overflow: hidden;
+	white-space: nowrap;
+	letter-spacing: .02em;
+	border-right: 2px solid transparent;
 }
-ul.links {
+.notice p:nth-child(2) {
+	margin-top: -1em;
+	animation: wait 6.4s, blink 0.6s 2 6.4s, type 3.0s steps(20, end) 7.6s, caret 0.1s 10.6s;
+}
+.notice p:nth-child(1)::before {
+	content: 'yo b ';
+}
+.notice p:nth-child(1) {
+	opacity: 0;
+	animation: wait 2.0s, blink 0.6s 2 2.0s, yob 1.2s steps(8) 3.2s, hasitate 0.6s 2 4.4s, delete 0.8s steps(7) 5.6s;
+}
+@keyframes wait {
+	from, to { width:0; }
+}
+@keyframes yob {
+	from, to { border-color:#999; opacity:1.0;  }
+	from { width:0; }
+	to { width:2.5em; }
+}
+@keyframes hasitate {
+	from, to { width:2.5em; border-color:transparent; opacity:1.0; }
+	50% { border-color:#999; }
+}
+@keyframes delete {
+	from, to { border-color:#999; opacity:1.0; }
+	from { width:2.5em; }
+	to { width:0; }
+}
+@keyframes type {
+	from, to { border-color:#999; }
+	from { width:0; }
+	to { width:6.5em; }
+}
+@keyframes blink {
+	from, to { width:0; border-color:transparent; display:block; }
+	50% { border-color:#999; display:block; }
+}
+@keyframes disappear {
+	to { border-color:transparent; }
+}
+
+.links {
 	margin: 10px auto 0px;
 	padding: 10px 0px;
 }
-ul.links li {
-	font-size: 1em;
+.links li {
+	font-size: 16px;
+	font-weight: 100;
 	line-height: 1.5em;
 	color: #666;
-	display: inline-block;
+	display:inline-block;
 	width: 1.5em;
-	margin: 0px 0.3em;
+	margin: 0px 0.2em;
 	background-color: #fff;
 	color: #ccc;
 	border-radius: 50%;
+	transform: translate(0, 2.2em);
+	opacity: 0;
+	animation: floatup 1.0s ease-out;
+	animation-fill-mode: forwards;
 }
+.links li:nth-child(1) {
+	animation-delay: 1.0s;
+}
+.links li:nth-child(2) {
+	animation-delay: 1.2s;
+}
+.links li:nth-child(3) {
+	animation-delay: 1.4s;
+}
+.links li:nth-child(4) {
+	animation-delay: 1.6s;
+}
+.links li:nth-child(5) {
+	animation-delay: 1.8s;
+}
+
+@keyframes floatup {
+	0% {transform:translate(0, 2.2em); opacity: 0;}
+	70% {transform:translate(0, -0.1em); opacity: 1;}
+	100% {transform:translate(0, 0em); opacity: 1;}
+}
+
 ul.links li:hover {
 	background-color: #999;
 	color: #fff;
+	transition: all 0.4s ease-out;
 }
+
 ul.links li a {
 	display: inline-block;
 	width: 1.5em;
@@ -152,18 +243,17 @@ ul.links li a {
 }
 
 footer {
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight: 100;
-	font-size: 1em;
-	color: #CCC;
+	font-family: "Helvetica Neue", Helvetica, Arial, Verdana, Geneva, sans-serif;
+	font-weight: normal;
+	font-size: 0.8em;
+	color: #C6C4BA;
 	text-align: center;
 	padding: 2em 0;
 	width: 100%;
 	position: absolute;
 	bottom: 0px;
 }
-
-@media all and (max-height:480px) {
+@media all and (max-height:360px) {
 	footer {
 		display: none;
 	}
