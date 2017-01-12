@@ -60,8 +60,8 @@ body {
 	margin: 0px;
 	padding: 0px;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	line-height: 1.5;
+	font-size: 1em;
+	line-height: 1;
 }
 img {
 	border: none;
@@ -127,15 +127,15 @@ ul.links {
 	padding: 10px 0px;
 }
 ul.links li {
-	font-size: 24px;
-	line-height: 32px;
+	font-size: 1em;
+	line-height: 1.5em;
 	color: #666;
 	display: inline-block;
-	width: 32px;
+	width: 1.5em;
 	margin: 0px 0.3em;
 	background-color: #fff;
 	color: #ccc;
-	border-radius: 25%;
+	border-radius: 50%;
 }
 ul.links li:hover {
 	background-color: #999;
@@ -143,10 +143,10 @@ ul.links li:hover {
 }
 ul.links li a {
 	display: inline-block;
-	width: 32px;
-	height: 32px;
+	width: 1.5em;
+	height: 1.5em;
 	text-indent: -12000em;
-	margin-left: -32px;
+	margin-left: -1.5em;
 	background: rgba(255, 0, 0. 0.1);
 	outline: none;
 }
