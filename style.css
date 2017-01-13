@@ -1,7 +1,6 @@
 @charset "UTF-8";
 @import url("HTML5/src/reset.css");
 @import url("eif.css");
-/* CSS Document */
 
 body {
 	color: #000;
@@ -56,7 +55,7 @@ h1.title {
 .avatar {
 	display: block;
 	width: 256px;
-	filter: grayscale(0.5);
+	filter: grayscale(0);
 	transform: translate(-128px, 0);
 	transition: all 0.2s ease-in 0.1s;
 }
@@ -70,13 +69,26 @@ h1.title {
 	width:128px;
 	height: 128px;
 	border-radius: 50%;
-	background-size: cover;
+	background-size: contain;
 }
 .avatar b {
-	background-image:url(images/photo.jpg);
+	background-image: url(images/photo.jpg);
 }
 .avatar i {
-	background-image:url(images/cat.png);
+	opacity: 0.4;
+	background-image: url(images/github.png);
+	background-image: url(images/github.svg), none;
+}
+@keyframes emerge {
+	to { opacity:0.4; }
+}
+
+@media all and (min-width:481px) {
+	.avatar i {
+		opacity: 0;
+		animation: emerge 0.8s linear 1.0s;
+		animation-fill-mode: forwards;
+	}
 }
 
 .notice {
@@ -86,8 +98,9 @@ h1.title {
 }
 
 .notice p {
-	font-family: "Courier New", Courier, monospace;
+	font-family: Menlo, "Courier New", Courier, monospace;
 	font-size: 0.6;
+	line-height: 1.2;
 	color: #999;
 	margin: 0 auto;
 	overflow: hidden;
@@ -221,7 +234,7 @@ footer {
 	bottom: 0px;
 }
 
-@media all and (max-height:360px) and (min-width:481px) { /* height < 360 and width > 480*/
+@media all and (max-height:380px) and (min-width:481px) { /* height < 360 and width > 480*/
 	footer {
 		display: none;
 	}
@@ -247,7 +260,7 @@ footer {
 		line-height: 52px;
 		margin: 0;
 		font-size: 32px;
-		text-indent: 24px;
+		text-indent: 0.5em;
 		border-bottom: 1px solid #ddd;
 		border-radius: 0;
 		transform: translate(320px,0);
@@ -286,6 +299,18 @@ footer {
 		font-size: 16px;
 		height: 48px;
 		vertical-align: baseline;
+	}
+	.links li i {
+		display: block;
+		text-align: right;
+		position: absolute;
+		top: 0;
+		right: 0.2em;
+		color: #ddd;
+		text-indent: 0;
+	}
+	.links li i::before {
+		content: "5";
 	}
 	
 	footer {
