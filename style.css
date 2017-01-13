@@ -1,57 +1,7 @@
 @charset "UTF-8";
+@import url("HTML5/src/reset.css");
 @import url("eif.css");
 /* CSS Document */
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-/* styles */
 
 body {
 	color: #000;
@@ -185,24 +135,24 @@ h1.title {
 }
 
 .links {
-	margin: 10px auto 0px;
-	padding: 10px 0px;
+	margin: 30px auto 0;
 }
 .links li {
+	display: inline-block;
+	position: relative;
 	font-size: 16px;
-	font-weight: 100;
+	font-weight: normal;
 	line-height: 1.5em;
+	height: 1.5em;
 	color: #666;
-	display:inline-block;
 	width: 1.5em;
-	margin: 0px 0.2em;
-	background-color: #fff;
+	margin: 0 0.4em;
 	color: #ccc;
 	border-radius: 50%;
 	transform: translate(0, 2.2em);
-	opacity: 0;
 	animation: floatup 1.0s ease-out;
 	animation-fill-mode: forwards;
+	opacity: 0;
 }
 .links li:nth-child(1) {
 	animation-delay: 1.0s;
@@ -223,27 +173,42 @@ h1.title {
 @keyframes floatup {
 	0% {transform:translate(0, 2.2em); opacity: 0;}
 	70% {transform:translate(0, -0.1em); opacity: 1;}
-	100% {transform:translate(0, 0em); opacity: 1;}
+	100% {transform:translate(0, 0); opacity: 1;}
 }
 
-ul.links li:hover {
+.links li:hover {
 	background-color: #999;
+	border-color: #333;
+	color: #fff;
+	transition: all 0.4s ease-out;
+}
+.links li:hover a:link, .links li:hover a:visited, .links li:hover a:active {
 	color: #fff;
 	transition: all 0.4s ease-out;
 }
 
-ul.links li a {
-	display: inline-block;
+.links li a {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-family: "Myriad Pro", "Helvetica Neue", Arial, Verdana, Geneva, sans-serif;
+	font-weight: normal;
 	width: 1.5em;
 	height: 1.5em;
 	text-indent: -12000em;
-	margin-left: -1.5em;
-	background: rgba(255, 0, 0. 0.1);
+	text-align: left;
 	outline: none;
+	text-decoration: none;
+}
+.links li a:link {
+	color: #666;
+}
+.links li a:visited {
+	color: #888;
 }
 
 footer {
-	font-family: "Helvetica Neue", Helvetica, Arial, Verdana, Geneva, sans-serif;
 	font-weight: normal;
 	font-size: 0.8em;
 	color: #C6C4BA;
@@ -253,8 +218,83 @@ footer {
 	position: absolute;
 	bottom: 0px;
 }
-@media all and (max-height:360px) {
+@media all and (max-height:360px) and (min-width:481px) {
 	footer {
 		display: none;
+	}
+}
+
+/* mobile styles */
+
+@media all and (max-width:480px) {
+	.box {
+		position: static;
+		margin: 0 auto;
+		border-radius: 0;
+	}
+	.links {
+		border-top: 1px solid #ddd;
+		overflow: hidden;
+	}
+	.links li {
+		display: block;
+		opacity: 1;
+		width: auto;
+		height: 48px;
+		line-height: 52px;
+		margin: 0;
+		font-size: 32px;
+		text-indent: 24px;
+		border-bottom: 1px solid #ddd;
+		border-radius: 0;
+		transform: translate(320px,0);
+		animation: slidein 0.8s ease-out;
+		animation-fill-mode: forwards;
+	}
+	@keyframes slidein {
+		to { transform:translate(0,0); }
+	}
+	.links li:nth-child(1) {
+		animation-delay: 0s;
+	}
+	.links li:nth-child(2) {
+		animation-delay: 0.2s;
+	}
+	.links li:nth-child(3) {
+		animation-delay: 0.4s;
+	}
+	.links li:nth-child(4) {
+		animation-delay: 0.6s;
+	}
+	.links li:nth-child(5) {
+		animation-delay: 0.8s;
+	}
+	.links li::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.links li a {
+		display: block;
+		position: static;
+		width: 100%;
+		margin-left: 0;
+		text-indent: 64px;
+		font-size: 16px;
+		height: 48px;
+		vertical-align: baseline;
+	}
+	
+	footer {
+		position: static;
+	}
+}
+
+@media all and (max-width:480px) and (min-height:620px) {
+	.box {
+		margin: 30px auto 0;
+	}
+	footer {
+		position: absolute;
 	}
 }
