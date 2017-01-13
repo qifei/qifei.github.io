@@ -55,12 +55,10 @@ h1.title {
 .avatar {
 	display: block;
 	width: 256px;
-	filter: grayscale(0);
 	transform: translate(-128px, 0);
 	transition: all 0.2s ease-in 0.1s;
 }
 .avatar:hover {
-	filter: grayscale(0.0);
 	transform: translate(0, 0);
 	transition: all 0.2s ease-in 0.1s;
 }
