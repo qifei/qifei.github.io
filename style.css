@@ -16,27 +16,29 @@ img {
 	border: none;
 }
 .box {
-	position: absolute;
-	top: 30%;
-	left: 50%;
+	margin: 0 auto;
 	text-align: center;
 	padding: 20px 0px;
-	margin: -150px auto auto -160px;;
 	width: 320px;
 	background-color: #FFFFFF;
 	border-radius: 2%;
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
-	animation: flyin 1.0s ease-out 0.2s;
+	
 }
 @keyframes flyin {
-	from { top:-50%; margin-top:-300px; }
+	to { top:30%; margin: -160px auto auto -160px; }
 }
-@media all and (max-height:500px) {
+@media all and (min-height:541px) and (min-width:481px) { /* height < 500 */
 	.box {
-		position: static;
-		margin: 0 auto;
+		position: absolute;
+		top: -50%;
+		left: 50%;
+		margin: -300px auto auto -160px;
+		animation: flyin 1.0s ease-out 0.2s;
+		animation-fill-mode: forwards;
 	}
 }
+
 h1.title {
 	font-size: 36px;
 	color: #666;
@@ -218,7 +220,8 @@ footer {
 	position: absolute;
 	bottom: 0px;
 }
-@media all and (max-height:360px) and (min-width:481px) {
+
+@media all and (max-height:360px) and (min-width:481px) { /* height < 360 and width > 480*/
 	footer {
 		display: none;
 	}
@@ -226,7 +229,7 @@ footer {
 
 /* mobile styles */
 
-@media all and (max-width:480px) {
+@media all and (max-width:480px) { /* width < 480*/
 	.box {
 		position: static;
 		margin: 0 auto;
@@ -290,7 +293,7 @@ footer {
 	}
 }
 
-@media all and (max-width:480px) and (min-height:620px) {
+@media all and (max-width:480px) and (min-height:620px) { /* height > 620 and width < 480*/
 	.box {
 		margin: 30px auto 0;
 	}
