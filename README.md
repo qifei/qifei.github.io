@@ -1,20 +1,9 @@
-# Experimental site
-> http://qifei.github.io
+# CSS3 and HTML5 site
+> https://qifei.github.io
 
-### ¿´ÁËÒ»Ð© CSS3 µÄ½Ì³Ì£¬ÊÔ×ÅÓÃ CSS3 µÄÐÂÑùÊ½
+### çœ‹äº†ä¸€äº› CSS3 çš„æ•™ç¨‹ï¼Œè¯•ç€ç”¨ CSS3 çš„æ–°æ ·å¼
 
->1. Ô²½Ç¾ØÐÎ
->2. Çø¿éÒõÓ°
->3. ×Ô¶¨Òå×ÖÌå
->4. ±³¾°Ëõ·Å
->5. Î±ÀàÑ¡ÔñÆ÷
+>1. Progressive enhancement or degradation
+>2. Animation CSS or Javascript
 
-> 2016/05/19 18:37
-
-### ¼ÌÐøÑ§Ï° CSS3
-
-> 1. Ñ¡Ôñ·û£º¹ØÏµÑ¡Ôñ£¬Í¬¼¶( E ~ E )£¬ÏÂ¼¶( E > E ), µÚn¸ö×ÓÔªËØ(nth-child(n))£¬¿ÕÔªËØ
-> 2. ÑùÊ½£ºÎÄ×ÖÑ¡Ôñ£¬Ìî³äÄÚÈÝ£¬±ä»»(Î»ÒÆ£¬Ðý×ª)£¬±ä»»¹ý¶È£¬Ê××ÖÄ¸±äÐÎ
-> 3. ±íµ¥£¬:enabled :disabled :checked
-
-> 2016/05/20 18:34
+> 2017/01/13 04:28
