@@ -7,7 +7,7 @@ body {
 	background-color: #F0EFEB;
 	margin: 0px;
 	padding: 0px;
-	font-family: "Helvetica Neue", Helvetica, Geneva, Arial, sans-serif;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 1em;
 	line-height: 1;
 }
@@ -67,15 +67,18 @@ h1.title {
 	width:128px;
 	height: 128px;
 	border-radius: 50%;
-	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
 .avatar b {
 	background-image: url(images/photo.jpg);
+	background-size: contain;
 }
 .avatar i {
 	opacity: 0.4;
 	background-image: url(images/github.png);
 	background-image: url(images/github.svg), none;
+	background-size: 60%;
 }
 @keyframes emerge {
 	to { opacity:0.4; }
