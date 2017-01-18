@@ -35,12 +35,12 @@ body {
 	padding: 10px;
 	background-color: #fff;
 }
-section {
+.section {
 	padding: 0 0 0.5em;
 	margin-bottom: 15px;
 	color: #4C4C43;
 }
-section h3 {
+.section h3 {
 	font-size: 1.2em;
 	font-weight: 400;
 	text-align: center;
@@ -48,7 +48,7 @@ section h3 {
 	padding: 0.6em 0;
 	border-bottom: 1px solid #E1E1C6;
 }
-section p {
+.section p {
 	line-height: 1.4;
 	margin: 1em 0;
 }
@@ -276,15 +276,14 @@ p.name .fi {
 #languages li {
 
 }
-#languages li mark {
+#languages li small {
 	display: inline-block;
 	text-transform: uppercase;
 	background: none;
-	padding-left: 2em;
+	margin-left: 2em;
 	font-size: 0.8em;
 }
-#languages li mark time {
-	display: inline-block;
+#languages li small {
 	padding: 0.0em 0.4em;
 	background-color: #999986;
 	color: #fff;
@@ -326,7 +325,7 @@ p.name .fi {
 	margin: 0;
 	padding-left: 0.8em;
 }
-.timeline li .time {
+.timeline li .time p {
 	margin-bottom: 0.5em;
 	padding: 0 0.6em;
 	border-left-width: 0.2em;
@@ -430,6 +429,7 @@ p.name .fi {
 	height: 16px;
 }
 .small-star, .small-star i:hover, .small-star i:active, .small-star i:focus, .small-star .current-rating {
+	background-image: url(images/rating-small.png);
 	background-size: 16px;
 	line-height: 16px;
 	height: 16px;
@@ -447,26 +447,24 @@ p.name .fi {
 .star-rating em {
 	display: none;
 }
-.star-rating i, .star-rating b {
+.star-rating i.one-star, .star-rating i.two-stars, .star-rating i.three-stars, .star-rating i.four-stars, .star-rating i.five-stars {
 	background: url(images/rating.png) center top no-repeat;
-	position: static;
-	display: inline-block;
-	width: 32px;
-	height: 32px;
-	padding: 0 8px;
 }
+
 .star-rating .current-rating, .star-rating .current-rating:hover {
 	background: none;
 }
 
-
-.star-rating i.one-star, .star-rating i.two-stars, .star-rating i.three-stars, .star-rating i.four-stars, .star-rating i.five-stars {
+.star-rating i.one-star, .star-rating i.two-stars, .star-rating i.three-stars, .star-rating i.four-stars, .star-rating i.five-stars, .current-rating b {
+	position: static;
+	display: inline-block;
+	float: left;
 	width: 32px;
+	height: 32px;
+	padding: 0 8px;
 }
 .star-rating .current-rating {
-	font-family: "Courier New", Courier, monospace;
 	background: none;
-	text-indent: 0em;
 	padding: 0;
 }
 .star-rating .current-rating b {
@@ -481,8 +479,10 @@ p.name .fi {
 	line-height: 16px;
 	height: 16px;
 }
-.small-star i.one-star, .small-star i.two-stars, .small-star i.three-stars, .small-star i.four-stars, .small-star i.five-stars, .small-star .current-rating b  {
+.small-star i.one-star, .small-star i.two-stars, .small-star i.three-stars, .small-star i.four-stars, .small-star i.five-stars, .small-star .current-rating b {
+	background-image: url(images/rating-small.png);
 	width: 16px;
+	height: 16px;
 	padding: 0 4px;
 }
 
@@ -514,21 +514,21 @@ p.name .fi {
 	.sidebar a:active, .sidebar a:hover {
 		text-decoration: none;
 	}
-	section {
+	.section {
 		background: none;
 		margin: 0;
 		padding: 1em;
 	}
-	section#contacts, section#skill {
+	#contacts, #skill {
 		background-color: #c2c2b2;
 		color: #fff;
 	}
-	section#contacts h3, section#skill h3 {
+	#contacts h3, #skill h3 {
 		border-color: #E2E2D0;
 	}
 	#frame {
 		margin-top: 1em;
-		animation: fadeColor 5.0s linear 20.0s;
+		animation: fadeColor 5.0s linear 30.0s;
 		animation-fill-mode: forwards;
 	}
 	@keyframes fadeColor {
@@ -593,7 +593,7 @@ p.name .fi {
 	.content {
 		background-color: #F6F5EC;
 	}
-	section {
+	.section {
 		padding: 0 1em;
 	}
 	.sidebar a:link, .sidebar a:visited {
@@ -604,23 +604,23 @@ p.name .fi {
 		color: #E1E1DD;
 		text-decoration: none;
 	}
-	.sidebar section {
+	.sidebar .section {
 		color: #DBDBD3;
 	}
-	.sidebar section h3 {
+	.sidebar .section h3 {
 		border-color: #656560;
 	}
-	.content section {
+	.content .section {
 		padding: 1.0em 1.5em 1.0em 2.5em;
 	}
-	.content section h3 {
+	.content .section h3 {
 		text-align: left;
 		color: #A4A48A;
 		font-size: 2em;
 		border-bottom: none;
 		padding: 0.5em 0 0;
 	}
-	.content section h3 span {
+	.content .section h3 span {
 		display: inline-block;
 		font-size: 0.9em;
 		padding: 0.3em;
@@ -674,7 +674,7 @@ p.name .fi {
 	.social_links li span {
 		color: #E1E1DD;
 	}
-	#languages li mark time {
+	#languages li small {
 		background-color: #20201E;
 		color: #8F8F8C;
 	}
@@ -704,7 +704,7 @@ p.name .fi {
 		padding-top: 0;
 		height: 2.5em;
 	}
-	.timeline li .time {
+	.timeline li .time p {
 		position: relative;
 		top: 2em;
 		padding: 0;
@@ -743,7 +743,7 @@ p.name .fi {
 @media only screen and (min-width:601px) {
 	.slide .mask {
 		transform: translate(0, -128px);
-		animation: cover 0.6s linear 20.0s;
+		animation: cover 0.6s linear 30.0s;
 		animation-fill-mode: forwards;
 	}
 	.slide .avatar {
@@ -751,7 +751,7 @@ p.name .fi {
 		background: url(images/github.png) center center no-repeat;
 		background-size: contain;
 		background-image: url(images/github.svg), none;
-		animation: showup 0.6s linear 20.8s;
+		animation: showup 0.6s linear 30.8s;
 		animation-fill-mode: forwards;
 	}
 	.slide:hover {

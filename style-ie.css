@@ -1,0 +1,37 @@
+@charset "UTF-8";
+@import url("HTML5/src/reset.css");
+@import url("eif.css");
+
+.box {
+	margin-top: 5em;
+	border-width: 0 2px 2px 0;
+	border: solid #ddd;
+}
+#shutter {
+	margin: 0 auto;
+	padding: 20px 0;
+}
+.notice {
+}
+.notice p {
+	font-size: 1em;
+	border: none;
+}
+.notice p.yob {
+	display: none;
+}
+.links {
+	margin: 0;
+	padding: 30px 0 0;
+}
+.links li {
+	display: inline;
+}
+.links li span {
+	display: inline-block;
+	padding: 0.2em;
+}
+.links li a {
+	display: block;
+	padding: 1px;
+}

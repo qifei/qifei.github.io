@@ -99,7 +99,7 @@ h1.title {
 }
 
 .notice p {
-	font-family: Menlo, "Courier New", Courier, monospace;
+	font-family: Menlo, Consolas, Monaco, Courier, monospace;
 	font-size: 0.6;
 	line-height: 1.2;
 	color: #999;
@@ -224,7 +224,7 @@ h1.title {
 	color: #888;
 }
 
-footer {
+#footer {
 	font-weight: normal;
 	font-size: 0.8em;
 	color: #C6C4BA;
@@ -236,7 +236,7 @@ footer {
 }
 
 @media all and (max-height:380px) and (min-width:481px) { /* height < 360 and width > 480*/
-	footer {
+	#footer {
 		display: none;
 	}
 }
@@ -258,10 +258,8 @@ footer {
 		opacity: 1;
 		width: auto;
 		height: 48px;
-		line-height: 52px;
+		line-height: 48px;
 		margin: 0;
-		font-size: 32px;
-		text-indent: 0.5em;
 		border-bottom: 1px solid #ddd;
 		border-radius: 0;
 		transform: translate(320px,0);
@@ -294,36 +292,45 @@ footer {
 	.links li a {
 		display: block;
 		position: static;
-		width: 100%;
+		width: auto;
 		margin-left: 0;
-		text-indent: 64px;
 		font-size: 16px;
-		height: 48px;
-		vertical-align: baseline;
+		height: 3em;
+		text-indent: 3em;
+	}
+	.links li span {
+		display: block;
+		position: absolute;
+		top: 0;
+		padding: 12px;
+		font-size: 24px;
+		line-height: 1em;
 	}
 	.links li i {
 		display: block;
 		text-align: right;
 		position: absolute;
 		top: 0;
-		right: 0.2em;
+		right: 0em;
 		color: #ddd;
 		text-indent: 0;
+		font-size: 32px;
 	}
 	.links li i::before {
+		font-family: ElegantIcons;
 		content: "5";
 	}
 	
-	footer {
+	#footer {
 		position: static;
 	}
 }
 
-@media all and (max-width:480px) and (min-height:620px) { /* height > 620 and width < 480*/
+@media all and (max-width:480px) and (min-height:630px) { /* height > 620 and width < 480*/
 	.box {
 		margin: 30px auto 0;
 	}
-	footer {
+	#footer {
 		position: absolute;
 	}
 }
