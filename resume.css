@@ -27,7 +27,7 @@
 body {
 	background-color: #fff;
 	color: #333;
-	font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
+	font-family: "Myriad Pro", Helvetica, Arial, sans-serif;
 	font-size: 16px;
 	line-height: 1.2;
 }
@@ -47,6 +47,9 @@ body {
 	text-transform: uppercase;
 	padding: 0.6em 0;
 	border-bottom: 1px solid #E1E1C6;
+}
+.section p, #objectives li {
+	font-family: "Open Sans", "PingFang TC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 }
 .section p {
 	line-height: 1.4;
@@ -591,6 +594,7 @@ p.name .fi {
 		background-color: #32322E;
 	}
 	.content {
+		min-width: 660px;
 		background-color: #F6F5EC;
 	}
 	.section {

@@ -4,8 +4,8 @@
 
 .box {
 	margin-top: 5em;
-	border-width: 0 2px 2px 0;
 	border: solid #ddd;
+	border-width: 0 2px 2px 0;
 }
 #shutter {
 	margin: 0 auto;

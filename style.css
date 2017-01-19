@@ -7,7 +7,7 @@ body {
 	background-color: #F0EFEB;
 	margin: 0px;
 	padding: 0px;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: "Myriad Pro", Helvetica, Arial, sans-serif;
 	font-size: 1em;
 	line-height: 1;
 }
@@ -333,4 +333,31 @@ h1.title {
 	#footer {
 		position: absolute;
 	}
+}
+
+/* update old browser */
+
+#updateOldBrowser {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #ff6;
+	color: #000;
+	border-bottom: 1px solid #999;
+	font-family: "PingFang TC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+	display: none;
+}
+#updateOldBrowser h2 {
+	font-size: 20px;
+	font-weight: bold;
+	padding: 20px 0 5px;
+	width: 600px;
+	margin: 0 auto;
+}
+#updateOldBrowser p {
+	font-size: 14px;
+	padding: 5px 0 10px;
+	width: 600px;
+	margin: 0 auto;
 }

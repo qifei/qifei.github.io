@@ -10,13 +10,35 @@
   <!--[if lte IE 9]>
   <link href="style-ie.css" rel="stylesheet" type="text/css">
   <![endif]-->
-  <script type="text/javascript">
+</head>
+<body>
+  <div class="box">
+    <div id="shutter"><p class="avatar"><b><img src="images/photo_small.jpg" alt="photo"></b><i></i></p></div>
+    <div class="notice"><p class="yob">asdf</p><p>Hello you~</p></div>
+    <ul class="links">
+      <li><span class="social_facebook"></span> <a href="http://www.facebook.com/" rel="nofollow">Facebook profile</a><i></i></li>
+      <li><span class="social_twitter"></span> <a href="http://www.twitter.com/" rel="nofollow">Twitter tweets</a><i></i></li>
+      <li><span class="social_wordpress"></span> <a href="http://qifei.wordpress.com/" rel="nofollow">WordPress blog</a><i></i></li>
+      <li><span class="icon_camera_alt"></span> <a href="http://www.flickr.com/" rel="nofollow">Flickr photos</a><i></i></li>
+      <li><span class="icon_genius"> </span><a href="https://github.com/qifei" rel="nofollow">Git repositories</a><i></i></li>
+    </ul>
+  </div>
+  <div id="footer">&copy; 2017 most rights reserved.</div>
+  <div id="updateOldBrowser">
+    <h2>这个浏览器太老了</h2>
+    <p>为了更佳的浏览体验和安全考量，请更新你的浏览器。 <a href="https://www.mozilla.org/en-US/firefox/all/" rel="nofollow" target="_blank" onclick="dismissWarning();">FireFox</a> , <a href="https://www.opera.com/" rel="nofollow" target="_blank" onclick="dismissWarning();">Opera</a> , <a href="https://www.google.com/chrome/" rel="nofollow" target="_blank" onclick="dismissWarning();">Chrome</a> , <a href="https://browser-update.org/zh/update.html?force_outdated=true" rel="nofollow" target="_blank" onclick="dismissWarning();">更多...</a></p>
+  </div>
+<script type="text/javascript">
 // browser detect
 if('querySelector' in document && 'localStorage' in window && 'addEventListener' in window) {
-	// you're OK
+  // you're OK
 } else {
-	alert('你的浏览器太老了，带你去下个新的');
-	//location.href = 'http://outdatedbrowser.com';
+  //alert('这个浏览器太老了，带你去下个新的');
+  //location.href = 'http://outdatedbrowser.com';
+  document.getElementById('updateOldBrowser').style.display = 'block';
+}
+function dismissWarning() {
+  document.getElementById('updateOldBrowser').style.display='none';
 }
 
 //Google analytics
@@ -30,18 +52,5 @@ ga('create', 'UA-1274130-3', 'auto');
 ga('send', 'pageview');
 
 </script>
-</head>
-<body>
-  <div class="box">
-    <div id="shutter"><p class="avatar"><b><img src="images/photo_small.jpg" alt="photo"></b><i></i></p></div>
-    <div class="notice"><p class="yob">asdf</p><p>Hello you~</p></div>
-    <ul class="links">
-      <li><span class="social_facebook"></span> <a href="http://www.facebook.com/qifeidong/">Facebook profile</a><i></i></li>
-      <li><span class="social_twitter"></span> <a href="http://www.twitter.com/qifei/">Twitter tweets</a><i></i></li>
-      <li><span class="social_wordpress"></span> <a href="http://dongqifei.wordpress.com/">WordPress blog</a><i></i></li>
-      <li><span class="icon_camera_alt"></span> <a href="http://www.flickr.com/dong/">Flickr photos</a><i></i></li>
-      <li><span class="icon_genius"> </span><a href="https://github.com/qifei">Git repositories</a><i></i></li>
-    </ul>
-  </div>
-  <div id="footer">&copy; 2017 most rights reserved.</div>
+  </body>
   </html>
