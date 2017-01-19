@@ -3,7 +3,7 @@
 
 ### Thoughts
 
->1. Progressive enhancement or degradation
+>1. Progressive enhancement or graceful degradation
 >2. Animation CSS or Javascript
 >3. SVG inline or as style
 
