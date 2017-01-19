@@ -157,10 +157,7 @@ h1.title {
 	display: inline-block;
 	position: relative;
 	font-size: 16px;
-	font-weight: normal;
-	line-height: 1.5em;
 	height: 1.5em;
-	color: #666;
 	width: 1.5em;
 	margin: 0 0.4em;
 	color: #ccc;
@@ -202,7 +199,12 @@ h1.title {
 	color: #fff;
 	transition: all 0.4s ease-out;
 }
-
+.links li span {
+	display: block;
+	padding: 0em;
+	font-weight: normal;
+	line-height: 1.5em;
+}
 .links li a {
 	display: block;
 	position: absolute;
