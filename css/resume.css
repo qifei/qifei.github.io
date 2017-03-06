@@ -101,9 +101,9 @@ body {
 	background-color: #32322E;
 }
 .slide .avatar {
-	background: url(images/github.png) center center no-repeat;
+	background: url(../images/github.png) center center no-repeat;
 	background-size: contain;
-	background-image: url(images/github.svg), none;
+	background-image: url(../images/github.svg), none;
 	filter: invert(1);
 }
 #info p.name {
