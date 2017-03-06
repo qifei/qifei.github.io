@@ -72,7 +72,7 @@ body {
 }
 #statement h2 {
 	height: 100px;
-	background: url(images/workwithyou.png) center center no-repeat;
+	background: url(../images/workwithyou.png) center center no-repeat;
 }
 .content .section h3 {
 	text-align: left;
@@ -151,6 +151,6 @@ body {
 	background-position: center -16px;
 }
 .small-star i.one-star, .small-star i.two-stars, .small-star i.three-stars, .small-star i.four-stars, .small-star i.five-stars, .small-star .current-rating b {
-	background-image: url(images/rating-small.png);
+	background-image: url(../images/rating-small.png);
 }
 
