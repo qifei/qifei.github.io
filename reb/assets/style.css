@@ -28,6 +28,11 @@ body {
 #site-header.float #navbar .navbar-brand {
 	display: block;
 }
+header .navbar-collapse {
+	max-width: 1140px;
+	margin: auto;
+	padding: 0 1rem;
+}
 #main {
 	background-color: #fff;
 	padding-bottom: 4rem;
