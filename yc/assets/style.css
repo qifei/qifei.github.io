@@ -1,4 +1,20 @@
 
+a:active, a:hover {
+	text-decoration: none;
+	color: #f00;
+}
+a:link, a:visited {
+	color: #7768D2;
+}
+body {
+	background-color: #f4f6f6;
+	font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+}
+#top-bar {
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+}
 .skip-navigation {
   @include sr-only;
   @include sr-only-focusable;
@@ -21,16 +37,11 @@
 	border-color: #666;
 	color: #fff;
 }
-
-a:active, a:hover {
-	text-decoration: none;
-	color: #f00;
+header {
+	background-color: #f8f8f6;
 }
-a:link, a:visited {
-	color: #7768D2;
-}
-body {
-	background-color: #f7f7f7;
+#top-search {
+	padding: 4em 0 1em;
 }
 #top-search .form-group {
 	padding: 0;
@@ -69,12 +80,7 @@ body {
 .fall, .fall a {
 	color: #c22;
 }
-header {
-	background-color: #f8f8f6;
-}
-#top-search {
-	padding: 1em 0;
-}
+
 #content {
 	min-height: 800px;
 	background-color: #f8f8f6;
@@ -87,7 +93,7 @@ header {
 
 .block {
 	background-color: #fff;
-	border-radius: 0.5em;
+	border-radius: 0.4em;
 	margin: 0.4em 0.4em 0.8em;
 	padding: 1em;
 }
