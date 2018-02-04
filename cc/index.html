@@ -37,7 +37,7 @@
 							<a class="nav-link" id="nav-info-tab" data-toggle="tab" href="#nav-info" role="tab" aria-controls="nav-info" aria-selected="false">基本信息</a>
 						</li>
 					</ul> -->
-					<nav>
+					<nav class="navbar-nav">
 						<div class="nav nav-tabs" id="nav-tab" role="tablist">
 							<a class="nav-item nav-link active" id="nav-news-tab" data-toggle="tab" href="#nav-news" role="tab" aria-controls="nav-news" aria-selected="true">最新资讯</a>
 							<a class="nav-item nav-link" id="nav-info-tab" data-toggle="tab" href="#nav-info" role="tab" aria-controls="nav-info" aria-selected="false">基本信息</a>
@@ -46,7 +46,7 @@
 				</div>
 				<form class="form-inline">
 					<input class="form-control mr-sm-2" type="search" placeholder="搜索..." aria-label="Search">
-					<button class="btn btn-outline-primary my-2 my-sm-0" type="submit">搜索</button>
+					<!-- <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">搜索</button> -->
 				</form>
 			</nav>
 		</div>
@@ -55,7 +55,7 @@
 	<div id="content">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-8">
+				<div class="col-lg-8">
 					<div class="tab-content" id="siteTabContent">
 						<div class="tab-pane fade show active" id="nav-news" role="tabpanel" aria-labelledby="nav-news-tab">
 							<ul class="news-list">
@@ -260,9 +260,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-auto">
-					<div id="ad-2" class="side-box text-center">
-						<img src="assets/ad.png" class=".img-fluid" alt="广告位招租">
+				<div class="col-lg-4">
+					<div id="ad-1" class="side-box text-center">
+						<img src="assets/ad.png" class="img-fluid" alt="广告位招租">
 					</div>
 				</div>
 			</div>
@@ -428,16 +428,13 @@
 		new Clipboard('.btn-clipboard');
 		var wrap = $(window);
 		var ad1 = $("#ad-1");
-		var ad2 = $("#ad-2");
 
 		wrap.on("scroll", function(e) {
 
 			if (this.scrollY > 1) {
 				ad1.addClass("float-ad");
-				ad2.addClass("float-ad");
 			} else {
 				ad1.removeClass("float-ad");
-				ad2.removeClass("float-ad");
 			}
 		});
 	</script>
