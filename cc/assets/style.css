@@ -280,8 +280,9 @@ header {
 	padding: 0;
 }
 
-.cc-info .cc-brief {
+.cc-info .cc-intro {
 	padding: 1rem 0;
+	word-break: break-all;
 }
 
 footer {
