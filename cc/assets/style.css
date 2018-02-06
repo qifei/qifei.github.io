@@ -126,10 +126,7 @@ header {
 	background-color: #fff;
 	padding: 3rem 0;
 }
-.tab-content {
-	padding-top: 1rem;
-}
-#siteTabContent {
+#siteTabContent.tab-content {
 	padding: 1rem 1rem 0;
 }
 
@@ -362,9 +359,14 @@ footer small {
 	#content {
 		padding-top: 6rem;
 	}
+	#site-search .btn {
+		display: none;
+	}
 }
 @media (max-width: 767.98px) {
-	
+	#content .container {
+		padding: 0;
+	}
 	#particles-js {
 		display: none;
 	}
