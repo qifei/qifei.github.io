@@ -9,7 +9,6 @@ a:link, a:visited {
 body {
 	background-color: #444;
 	font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
-	padding-top: 3rem;
 }
 .rise, .rise a {
 	color: #191;
@@ -18,11 +17,6 @@ body {
 	color: #c22;
 }
 
-#top-bar {
-	position: fixed;
-	z-index: 1;
-	width: 100%;
-}
 .skip-navigation {
   @include sr-only;
   @include sr-only-focusable;
@@ -50,11 +44,6 @@ body {
 }
 header {
 	background-color: #fff;
-	width: 100%;
-	position: fixed;
-	left: 0;
-	top: 0;
-	z-index: 1;
 }
 /*#site-nav {
 	padding-bottom: 0;
@@ -384,5 +373,17 @@ footer small {
 @media (min-width: 992px) {
 	#content .container {
 		max-width: 800px;
+	}
+}
+@media (min-width: 768px) {
+	body {
+		padding-top: 3rem;
+	}
+	header {
+		width: 100%;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 1;
 	}
 }
