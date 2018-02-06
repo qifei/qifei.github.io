@@ -282,6 +282,10 @@ header {
 
 .cc-info .cc-intro {
 	padding: 1rem 0;
+}
+.cc-intro p {
+	white-space: pre-line;
+	word-wrap: break-word;
 	word-break: break-all;
 }
 
@@ -347,7 +351,7 @@ footer small {
 }
 @media (max-width: 575.98px) {
 	#content {
-		padding-top: 6rem;
+		/*padding-top: 6rem;*/
 	}
 	#site-search .btn {
 		display: none;
