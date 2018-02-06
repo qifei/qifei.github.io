@@ -284,6 +284,7 @@ header {
 	padding: 1rem 0;
 }
 .cc-intro p {
+	width: 100%;
 	overflow-wrap: break-word;
 	line-break: normal;
 	white-space: pre-line;
