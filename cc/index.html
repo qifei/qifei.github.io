@@ -17,45 +17,47 @@
 
 	<header class="bg-primary">
 		<div class="container">
-			<nav class="navbar navbar-expand-lg navbar-dark bg-primary" id="site-nav">
+			<nav class="navbar navbar-dark bg-primary" id="site-nav">
 				<a class="navbar-brand" href="">
 					<picture>
 						<source srcset="assets/cc-logo.svg" type="image/svg+xml">
-						<img src="assets/cc-logo.png" width="36" height="36" alt="Block-Chain">
+						<img src="assets/cc-logo.png" width="30" height="30" alt="Block-Chain">
 					</picture>
 					<span class="brand-name">牛币ABC</span>
 				</a>
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarNav">
-					<!-- <ul class="navbar-nav nav-tabs" id="siteTab" role="tablist">
-						<li class="nav-item">
-							<a class="nav-link active" id="nav-news-tab" data-toggle="tab" href="#nav-news" role="tab" aria-controls="nav-news" aria-selected="true">最新资讯</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" id="nav-info-tab" data-toggle="tab" href="#nav-info" role="tab" aria-controls="nav-info" aria-selected="false">基本信息</a>
-						</li>
-					</ul> -->
-					<nav class="navbar-nav">
-						<div class="nav nav-tabs" id="nav-tab" role="tablist">
-							<a class="nav-item nav-link active" id="nav-news-tab" data-toggle="tab" href="#nav-news" role="tab" aria-controls="nav-news" aria-selected="true">最新资讯</a>
-							<a class="nav-item nav-link" id="nav-info-tab" data-toggle="tab" href="#nav-info" role="tab" aria-controls="nav-info" aria-selected="false">基本信息</a>
-						</div>
-					</nav>
-				</div>
-				<form class="form-inline">
+				<form class="form-inline" id="site-search">
 					<input class="form-control mr-sm-2" type="search" placeholder="搜索..." aria-label="Search">
-					<!-- <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">搜索</button> -->
+					<button class="btn btn-primary my-2 my-sm-0" type="submit">搜索</button>
 				</form>
 			</nav>
 		</div>
 	</header>
 
 	<div id="content">
-		<div class="container">
+		<!-- Tabs Begin -->
+		<div class="container" id="cc-header">
 			<div class="row">
-				<div class="col-lg-8">
+				<div class="col-md">
+					<h1 class="cc-title"><i class="fab fa-btc"></i>比特币 Bitcoin BTC</h1>
+				</div>
+				<div class="col-md-auto">
+					<span class="cc-price rise">&yen;3456435.35</span>
+				</div>
+			</div>
+			
+			<ul class="nav nav-tabs" id="siteTab" role="tablist">
+				<li class="nav-item ml-3">
+					<a class="nav-link active" id="nav-news-tab" data-toggle="tab" href="#nav-news" role="tab" aria-controls="nav-news" aria-selected="true">最新资讯</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" id="nav-info-tab" data-toggle="tab" href="#nav-info" role="tab" aria-controls="nav-info" aria-selected="false">基本信息</a>
+				</li>
+			</ul>
+		</div>
+		<!-- Tabs End -->
+		<div class="container">
+			<!-- <div class="row"> -->
+				<!-- <div class="col-lg-8x"> -->
 					<div class="tab-content" id="siteTabContent">
 						<div class="tab-pane fade show active" id="nav-news" role="tabpanel" aria-labelledby="nav-news-tab">
 							<ul class="news-list">
@@ -217,7 +219,7 @@
 						</div>
 						<div class="tab-pane fade" id="nav-info" role="tabpanel" aria-labelledby="nav-info-tab">
 							<div class="cc-info">
-								<h4>比特币 BTC BitCoin 基本信息</h4>
+								<!-- <h4>基本信息</h4> -->
 								<div class="row">
 									<div class="col-md-6"><label>发行时间:</label> <span>2009.12.12</span></div>
 									<div class="col-md-6"><label>众筹价格:</label> <span>&yen;3452345.12</span></div>
@@ -251,21 +253,21 @@
 									<div class="col"><label>简介:</label></div>
 									<div class="col-auto">
 										<div class="cc-brief">
-											<p>Bitcoin is a cryptocurrency and worldwide payment system.[9]:3 It is the first decentralized digital currency, as the system works without a central bank or single administrator.[9]:1[10] The network is peer-to-peer and transactions take place between users directly, without an intermediary.[9]:4 These transactions are verified by network nodes through the use of cryptography and recorded in a public distributed ledger called a blockchain. Bitcoin was invented by an unknown person or group of people under the name Satoshi Nakamoto[11] and released as open-source software in 2009.[12]</p>
-											<p>Bitcoins are created as a reward for a process known as mining. They can be exchanged for other currencies,[13] products, and services. As of February 2015, over 100,000 merchants and vendors accepted bitcoin as payment.[14] Research produced by the University of Cambridge estimates that in 2017, there are 2.9 to 5.8 million unique users using a cryptocurrency wallet, most of them using bitcoin.[15]</p>
+											<p>比特币（BitCoin）的概念最初由中本聪在2009年提出，根据中本聪的思路设计发布的开源软件以及建构其上的P2P网络。比特币是一种P2P形式的数字货币。点对点的传输意味着一个去中心化的支付系统。</p>
+											<p>与大多数货币不同，比特币不依靠特定货币机构发行，它依据特定算法，通过大量的计算产生，比特币经济使用整个P2P网络中众多节点构成的分布式数据库来确认并记录所有的交易行为，并使用密码学的设计来确保货币流通各个环节安全性。P2P的去中心化特性与算法本身可以确保无法通过大量制造比特币来人为操控币值。基于密码学的设计可以使比特币只能被真实的拥有者转移或支付。这同样确保了货币所有权与流通交易的匿名性。比特币与其他虚拟货币最大的不同，是其总数量非常有限，具有极强的稀缺性。该货币系统曾在4年内只有不超过1050万个，之后的总数量将被永久限制在2100万个。</p>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="col-lg-4">
+				<!-- </div> -->
+<!-- 				<div class="col-lg-4x">
 					<div id="ad-1" class="side-box text-center">
 						<img src="assets/ad.png" class="img-fluid" alt="广告位招租">
 					</div>
-				</div>
-			</div>
+				</div> -->
+			<!-- </div> -->
 		</div>
 	</div>
 
@@ -426,17 +428,17 @@
 	<script src="assets/clipboard.min.js" crossorigin="anonymous"></script>
 	<script type="text/javascript">
 		new Clipboard('.btn-clipboard');
-		var wrap = $(window);
-		var ad1 = $("#ad-1");
+		// var wrap = $(window);
+		// var ad1 = $("#ad-1");
 
-		wrap.on("scroll", function(e) {
+		// wrap.on("scroll", function(e) {
 
-			if (this.scrollY > 1) {
-				ad1.addClass("float-ad");
-			} else {
-				ad1.removeClass("float-ad");
-			}
-		});
+		// 	if (this.scrollY > 96) {
+		// 		ad1.addClass("float-ad");
+		// 	} else {
+		// 		ad1.removeClass("float-ad");
+		// 	}
+		// });
 	</script>
 </body>
 </html>

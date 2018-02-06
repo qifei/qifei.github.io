@@ -11,6 +11,12 @@ body {
 	font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
 	padding-top: 3rem;
 }
+.rise, .rise a {
+	color: #191;
+}
+.fall, .fall a {
+	color: #c22;
+}
 
 #top-bar {
 	position: fixed;
@@ -50,7 +56,7 @@ header {
 	top: 0;
 	z-index: 1;
 }
-#site-nav {
+/*#site-nav {
 	padding-bottom: 0;
 }
 #site-nav .navbar-brand {
@@ -58,7 +64,7 @@ header {
 }
 #site-nav .nav-tabs {
 	border-bottom: none;
-}
+}*/
 #site-nav .nav-item {
 	margin-bottom: 0;
 }
@@ -83,12 +89,48 @@ header {
 	color: #000;
 }
 
+#site-search input[type="search"] {
+	background-color: rgba(255,255,255,0.1);
+	border-color: rgba(255,255,255,0.3);
+	color: rgba(255,255,255,0.5);
+}
+#site-search input[type="search"]::placeholder {
+	color: rgba(255,255,255,0.5);
+}
+#site-search input[type="search"]:focus {
+	outline-color: rgba(255,255,255,0.5);
+}
+#site-search button[type="submit"] {
+	border: 1px solid rgba(255,255,255,0.3);
+	color: rgba(255,255,255,0.5);
+}
+
+#cc-header .row {
+	padding-bottom: 1rem;
+	margin: 0 1rem;
+}
+#cc-header .row .col-md {
+	padding: 0;
+}
+.cc-title {
+	font-size: 1.6rem;
+	color: #555;
+}
+.cc-price {
+	font-size: 1.2rem;
+}
+#cc-header .nav-tabs {
+	margin: 0 1rem;
+}
 #content {
 	background-color: #fff;
 	padding: 3rem 0;
 }
+.tab-content {
+	padding-top: 1rem;
+}
 #siteTabContent {
-	padding: 0 1rem;
+	padding: 1rem 1rem 0;
 }
 
 .news-list {
@@ -317,7 +359,9 @@ footer small {
 	height: 100%;
 }
 @media (max-width: 575.98px) {
-
+	#content {
+		padding-top: 6rem;
+	}
 }
 @media (max-width: 767.98px) {
 	
@@ -331,10 +375,12 @@ footer small {
 	}
 }
 @media (max-width: 991.98px) {
-	#content {
-		padding-top: 6rem;
-	}
 	.side-box {
 		display: none;
+	}
+}
+@media (min-width: 992px) {
+	#content .container {
+		max-width: 800px;
 	}
 }
