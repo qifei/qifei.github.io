@@ -73,8 +73,7 @@
 									</div>
 									<div class="box-body">
 										<div class="brief">
-											<p>David Benioff and D.B. Weiss are going from Winterfell to a galaxy far, far away.</p>
-											<p>It was announced today that Benioff and Weiss, creators of the smash-hit, Emmy Award-winning television series Game of Thrones, will write and produce a new series of Star Wars films. <span class="see-more">「<a href="#load-content-001" id="load-btn-001" role="load-btn" aria-controls="load-content-001" data-href="full-text.html">查看全文</a>」</span></p>
+											<p>David Benioff and D.B. Weiss are going from Winterfell to a galaxy far, far away. It was announced today that Benioff and Weiss, creators of the smash-hit, Emmy Award-winning television series Game of Thrones, will write and produce a new series of Star Wars films. <span class="see-more">「<a href="#load-content-001" id="load-btn-001" role="load-btn" aria-controls="load-content-001" data-href="./full-text.html">查看全文</a>」</span></p>
 										</div>
 										<div class="full" id="load-content-001" role="load-container" aria-labelledby="load-btn-001">...</div>
 									</div>
@@ -459,7 +458,7 @@
 		$( ".news-list-item a[role='load-btn']" ).click(function( event ) {
 				event.preventDefault();
 				var dataHref = $(this).attr("data-href");
-				var container = $($(this).attr("aria-controls"));
+				var container = $("#" + $(this).attr("aria-controls"));
 				var str = $(this).attr("aria-controls");
 				var parent = $( "#" + str.replace("load-content", "news"));
 				container.load(dataHref, function (response, status, xhr) {
