@@ -466,7 +466,7 @@
 					if ( status == "error" ) {
 						var msg = "读取全文失败";
 						container.html( '<div class="alert alert-secondary" role="alert">' + msg + xhr.status + " " + xhr.statusText + '</div>');
-					else
+					} else {
 						parent.addClass("expanded")
 					}
 				});
