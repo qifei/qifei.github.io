@@ -157,10 +157,10 @@ header {
 	padding: 1.0rem 1rem 0.25rem;
 }
 .box-body {
-	padding: 0.5rem 1rem;
+	padding: 0.5rem 1rem 0;
 }
 .box-footer {
-	padding: 0.25rem 1rem 1.0rem;
+	padding: 0 1rem 1.0rem;
 }
 
 .box-header h3 {
@@ -190,9 +190,7 @@ header {
 	font-size: 1rem;
 	color: #525252;
 }
-.box-body p {
-	margin-bottom: 0;
-}
+
 .box-body .see-more {
 	font-size: 0.85rem;
 	display: inline-block;
