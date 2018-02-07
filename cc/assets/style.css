@@ -135,6 +135,19 @@ header {
 	padding-right: 0;
 }
 
+.news-list-item .brief {
+	display: block;
+}
+.news-list-item .full {
+	display: none;
+}
+.news-list-item.expanded .brief {
+	display: none;
+}
+.news-list-item.expanded .full {
+	display: block;
+}
+
 .box {
 	/*background-color: #fff;
 	border: 1px solid #999;
@@ -285,7 +298,6 @@ header {
 }
 .cc-intro p {
 	overflow-wrap: break-word;
-	line-break: break-all;
 }
 
 footer {
