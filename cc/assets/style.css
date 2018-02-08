@@ -179,6 +179,7 @@ header {
 	vertical-align: top;
 	color: #999;
 	margin-left: 0.5rem;
+	display: inline-block;
 }
 .box-header .post-time {
 	/*font-family: 'Open Sans', Roboto, sans-serif;*/
