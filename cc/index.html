@@ -465,10 +465,11 @@
 				container.load(dataHref, function (response, status, xhr) {
 					if ( status == "error" ) {
 						var msg = "读取全文失败";
-						controler.append( '<div class="alert alert-secondary" role="alert">' + msg + xhr.status + " " + xhr.statusText + '</div>');
+						//controler.append( '<div class="alert alert-secondary" role="alert">' + msg + xhr.status + " " + xhr.statusText + '</div>');
 					} else {
 						$(controler .alert).remove();
 						parent.addClass("expanded");
+						controler.append( '<div class="alert alert-secondary" role="alert">' + msg + xhr.status + " " + xhr.statusText + '</div>');
 					}
 				});
 			});
