@@ -45,38 +45,6 @@ body {
 header {
 	background-color: #fff;
 }
-/*#site-nav {
-	padding-bottom: 0;
-}
-#site-nav .navbar-brand {
-	padding-top: 0;
-}
-#site-nav .nav-tabs {
-	border-bottom: none;
-}*/
-#site-nav .nav-item {
-	margin-bottom: 0;
-}
-#site-nav .nav-link {
-	padding: 0.75rem 1rem;
-	border-radius: 0;
-}
-
-#site-nav .nav-link.active {
-	color: #000;
-}
-#site-nav .nav-link {
-	color: #fff;
-}
-#site-nav .nav-tabs .nav-link:focus, #site-nav .nav-tabs .nav-link:hover {
-	border-color: transparent;
-	background-color: rgba(255,255,255,0.2);
-	color: #fff;
-}
-#site-nav .nav-tabs .nav-link.active:focus, #site-nav .nav-tabs .nav-link.active:hover {
-	background-color: rgba(255,255,255,1.0);
-	color: #000;
-}
 
 #site-search input[type="search"] {
 	background-color: rgba(255,255,255,0.1);
@@ -329,8 +297,7 @@ footer a:hover, footer a:active {
 footer small {
 	font-weight: lighter;
 }
-.side-box {
-}
+
 .float-ad {
 	position: fixed;
 	top: 6rem;
@@ -354,13 +321,6 @@ footer small {
 	margin-right: 1em;
 	line-height: 1.4em;
 }
-#particles-js {
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-}
 @media (max-width: 575.98px) {
 	#content {
 		/*padding-top: 6rem;*/
@@ -372,14 +332,6 @@ footer small {
 @media (max-width: 767.98px) {
 	#content .container {
 		padding: 0;
-	}
-	#particles-js {
-		display: none;
-	}
-	#top-search .form-group {
-		display: flex;
-		align-items: center;
-		justify-content: center !important;
 	}
 }
 @media (max-width: 991.98px) {

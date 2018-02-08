@@ -448,41 +448,27 @@
 	<script src="assets/bootstrap-4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
 	<script src="assets/clipboard.min.js" crossorigin="anonymous"></script>
 	<script type="text/javascript">
-		//$( document ).ready(
-			
-		//);
 		
 		new Clipboard('.btn-clipboard');
 
-			$( ".news-list-item a[role='load-btn']" ).click(function( event ) {
-				event.preventDefault();
-				var dataHref = $(this).attr("data-href");
-				var container = $("#" + $(this).attr("aria-controls"));
-				var str = $(this).attr("aria-controls");
-				var parent = $( "#" + str.replace("load-content", "news"));
-				var controler = parent.find(".brief");
-				container.load(dataHref, function (response, status, xhr) {
-					if ( status == "error" ) {
-						var msg = "读取全文失败";
-						controler.append( '<div class="alert alert-secondary" role="alert">' + msg + xhr.status + " " + xhr.statusText + '</div>');
-					} else {
-						$(controler .alert).remove();
-						parent.addClass("expanded");
-					}
-				});
+		$( ".news-list-item a[role='load-btn']" ).click(function( event ) {
+			event.preventDefault();
+			var dataHref = $(this).attr("data-href");
+			var container = $("#" + $(this).attr("aria-controls"));
+			var str = $(this).attr("aria-controls");
+			var parent = $( "#" + str.replace("load-content", "news"));
+			var controler = parent.find(".brief");
+			container.load(dataHref, function (response, status, xhr) {
+				if ( status == "error" ) {
+					var msg = "读取全文失败";
+					controler.append( '<div class="alert alert-secondary" role="alert">' + msg + xhr.status + " " + xhr.statusText + '</div>');
+				} else {
+					$(controler .alert).remove();
+					parent.addClass("expanded");
+				}
 			});
+		});
 		
-		// var wrap = $(window);
-		// var ad1 = $("#ad-1");
-
-		// wrap.on("scroll", function(e) {
-
-		// 	if (this.scrollY > 96) {
-		// 		ad1.addClass("float-ad");
-		// 	} else {
-		// 		ad1.removeClass("float-ad");
-		// 	}
-		// });
 	</script>
 </body>
 </html>
