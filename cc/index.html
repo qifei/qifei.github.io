@@ -41,7 +41,7 @@
 					<h1 class="cc-title"><i class="fab fa-btc"></i>比特币 Bitcoin BTC</h1>
 				</div>
 				<div class="col-md-auto">
-					<span class="cc-price rise">&yen;3456435.35</span>
+					<span class="cc-price rise"></span>
 				</div>
 			</div>
 			
@@ -461,11 +461,13 @@
 				var container = $("#" + $(this).attr("aria-controls"));
 				var str = $(this).attr("aria-controls");
 				var parent = $( "#" + str.replace("load-content", "news"));
+				var controler = $(parent > .brief);
 				container.load(dataHref, function (response, status, xhr) {
 					if ( status == "error" ) {
 						var msg = "读取全文失败";
-						container.html( '<div class="alert alert-secondary" role="alert">' + msg + xhr.status + " " + xhr.statusText + '</div>');
+						controler.append( '<div class="alert alert-secondary" role="alert">' + msg + xhr.status + " " + xhr.statusText + '</div>');
 					} else {
+						$(controler > .alert).remove();
 						parent.addClass("expanded");
 					}
 				});
