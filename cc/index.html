@@ -448,14 +448,10 @@
 	<script src="assets/bootstrap-4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
 	<script src="assets/clipboard.min.js" crossorigin="anonymous"></script>
 	<script type="text/javascript">
-		// $( document ).ready(
-			
-			
-		// );
+		$( document ).ready(
+			new Clipboard('.btn-clipboard');
 
-		new Clipboard('.btn-clipboard');
-
-		$( ".news-list-item a[role='load-btn']" ).click(function( event ) {
+			$( ".news-list-item a[role='load-btn']" ).click(function( event ) {
 				event.preventDefault();
 				var dataHref = $(this).attr("data-href");
 				var container = $("#" + $(this).attr("aria-controls"));
@@ -472,6 +468,8 @@
 					}
 				});
 			});
+			
+		);
 		
 		// var wrap = $(window);
 		// var ad1 = $("#ad-1");
