@@ -461,7 +461,7 @@
 				var container = $("#" + $(this).attr("aria-controls"));
 				var str = $(this).attr("aria-controls");
 				var parent = $( "#" + str.replace("load-content", "news"));
-				var controler = $(parent .brief);
+				var controler = parent.find(".brief");
 				container.load(dataHref, function (response, status, xhr) {
 					if ( status == "error" ) {
 						var msg = "读取全文失败";
