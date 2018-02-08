@@ -94,7 +94,7 @@ header {
 }
 .news-list-item {
 	background-color: #fff;
-	padding: 0.5rem 0 0;
+	padding: 0.5rem 0;
 	margin: 0;
 	border-bottom: 1px solid #e3e3e3;
 }
@@ -122,13 +122,13 @@ header {
 	border-radius: 0.5rem;*/
 }
 .box-header {
-	padding: 1.0rem 1rem 0.25rem;
+	padding: 1.0rem 1rem 0.5rem;
 }
 .box-body {
 	padding: 0.5rem 1rem 0;
 }
 .box-footer {
-	padding: 0 1rem 1.0rem;
+	padding: 0 1rem 0.5rem;
 }
 
 .box-header h3 {
@@ -205,6 +205,9 @@ header {
 	background-color: #fff;
 	padding: 0;
 	margin: 0;
+}
+.comment-list-item .box-footer {
+	padding-bottom: 0.5rem;
 }
 .comment-list-item .box-footer a .fa-arrow-up {
 	color: #888;
