@@ -461,13 +461,13 @@
 				var container = $("#" + $(this).attr("aria-controls"));
 				var str = $(this).attr("aria-controls");
 				var parent = $( "#" + str.replace("load-content", "news"));
-				var controler = $(parent > div.brief);
+				var controler = $(parent .brief);
 				container.load(dataHref, function (response, status, xhr) {
 					if ( status == "error" ) {
 						var msg = "读取全文失败";
 						controler.append( '<div class="alert alert-secondary" role="alert">' + msg + xhr.status + " " + xhr.statusText + '</div>');
 					} else {
-						$(controler > div.alert).remove();
+						$(controler .alert).remove();
 						parent.addClass("expanded");
 					}
 				});
