@@ -5,6 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<style>
+		.container, .container-fluid {
+			max-width: 1140px;
+		}
 		video {
 			background: #666;
 		}
@@ -14,7 +17,12 @@
 </head>
 <body>
 	<div class="container-fluid">
-		<h1>Videos</h1>
+		<div class="jumbotron">
+			<h1 class="display-4">骑行视频记录</h1>
+			<p class="lead">记录美好的景致，分享愉快经历</p>
+			<hr class="my-4">
+			<p>由于不会压制视频，微信分享大文件会被压缩成渣，只好放在这里，可下载，不定期更新。</p>
+		</div>
 
 		<div class="card mb-3">
 			<video controls class="card-img-top" poster="http://i.dongde.com/videos/miyun_cover.jpg">
@@ -22,7 +30,7 @@
 			</video>
 			<div class="card-body">
 				<h5 class="card-title">密云琉辛路</h5>
-				<p class="card-text">Riding with bikers</p>
+				<p class="card-text">说好的早点起，没有；说好的休闲骑，也没有。</p>
 				<p class="card-text"><small class="text-muted">2019.09.08</small> <a class="btn btn-light" href="http://i.dongde.com/videos/miyun.mp4" role="button">Download</a></p>
 			</div>
 		</div>
@@ -33,7 +41,7 @@
 			</video>
 			<div class="card-body">
 				<h5 class="card-title">155天下第一</h5>
-				<p class="card-text">Gixxer 155 - Best motorcycle ever. Video editing for fun</p>
+				<p class="card-text">Gixxer 155 - Best motorcycle ever. Video editing for fun. 也是闲的</p>
 				<p class="card-text"><small class="text-muted">2019.09.07</small> <a class="btn btn-light" href="http://i.dongde.com/videos/motoswag.mp4" role="button">Download</a></p>
 			</div>
 		</div>
@@ -43,11 +51,56 @@
 				<source src="http://i.dongde.com/videos/sunnysaturdayriding.mp4" type="video/mp4">
 			</video>
 			<div class="card-body">
-				<h5 class="card-title">延琉路-百里画廊-四海</h5>
-				<p class="card-text">Sun, greens, friends</p>
+				<h5 class="card-title">阳光灿烂周六游</h5>
+				<p class="card-text">琉璃庙-汤河口-百里画廊-四海</p>
 				<p class="card-text"><small class="text-muted">2019.06.29</small> <a class="btn btn-light" href="http://i.dongde.com/videos/sunnysaturdayriding.mp4" role="button">Download</a></p>
 			</div>
 		</div>
+
+		<div class="card mb-3">
+			<video controls class="card-img-top" poster="http://i.dongde.com/videos/weekendwind_cover.jpg">
+				<source src="http://i.dongde.com/videos/weekendwind.mp4" type="video/mp4">
+			</video>
+			<div class="card-body">
+				<h5 class="card-title">官厅水库</h5>
+				<p class="card-text">上了高速，就慢不下来</p>
+				<p class="card-text"><small class="text-muted">2019.06.23</small> <a class="btn btn-light" href="http://i.dongde.com/videos/weekendwind.mp4" role="button">Download</a></p>
+			</div>
+		</div>
+
+		<div class="card mb-3">
+			<video controls class="card-img-top" poster="http://i.dongde.com/videos/weilai_cover.jpg">
+				<source src="http://i.dongde.com/videos/weilai.mp4" type="video/mp4">
+			</video>
+			<div class="card-body">
+				<h5 class="card-title">未来科技城大桥</h5>
+				<p class="card-text">夜里骑车有不一样的感觉</p>
+				<p class="card-text"><small class="text-muted">2018.10.30</small> <a class="btn btn-light" href="http://i.dongde.com/videos/weilai.mp4" role="button">Download</a></p>
+			</div>
+		</div>
+
+		<div class="card mb-3">
+			<video controls class="card-img-top" poster="http://i.dongde.com/videos/fanqilu2_cover.jpg">
+				<source src="http://i.dongde.com/videos/fanqilu2.mp4" type="video/mp4">
+			</video>
+			<div class="card-body">
+				<h5 class="card-title">范崎路漂移</h5>
+				<p class="card-text">我就静静地跟在后面，看他俩压弯。</p>
+				<p class="card-text"><small class="text-muted">2018.10.14</small> <a class="btn btn-light" href="http://i.dongde.com/videos/fanqilu2.mp4" role="button">Download</a></p>
+			</div>
+		</div>
+
+		<div class="card mb-3">
+			<video controls class="card-img-top" poster="http://i.dongde.com/videos/fanqilu_cover.jpg">
+				<source src="http://i.dongde.com/videos/fanqilu.mp4" type="video/mp4">
+			</video>
+			<div class="card-body">
+				<h5 class="card-title">范崎路三岔口</h5>
+				<p class="card-text">一个人，走到哪里算哪里。遇到一队DUKE390车队，好酷。</p>
+				<p class="card-text"><small class="text-muted">2018.10.07</small> <a class="btn btn-light" href="http://i.dongde.com/videos/fanqilu.mp4" role="button">Download</a></p>
+			</div>
+		</div>
+
 	</div>
 
 	<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
