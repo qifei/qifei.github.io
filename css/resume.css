@@ -685,6 +685,9 @@ p.name .fi {
 	#statement {
 		padding: 2.0em 1.5em 0 1.5em;
 	}
+	#profile p {
+		margin-left: 3.5em;
+	}
 	
 	.timeline {
 		margin-left: 0em;
