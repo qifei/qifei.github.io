@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+	<link rel="icon" type="image/x-icon" href="/us/smg/etc/designs/samsung/global/favicon.ico"/>
+	<link rel="shortcut icon" type="image/x-icon" href="/us/smg/etc/designs/samsung/global/favicon.ico"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+	<title>Clock</title>
+	<style type="text/css">
+		/* http://meyerweb.com/eric/tools/css/reset/ 
+			v2.0 | 20110126
+			License: none (public domain)
+		*/
+
+		html, body, div, span, applet, object, iframe,
+		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+		a, abbr, acronym, address, big, cite, code,
+		del, dfn, em, img, ins, kbd, q, s, samp,
+		small, strike, strong, sub, sup, tt, var,
+		b, u, i, center,
+		dl, dt, dd, ol, ul, li,
+		fieldset, form, label, legend,
+		table, caption, tbody, tfoot, thead, tr, th, td,
+		article, aside, canvas, details, embed, 
+		figure, figcaption, footer, header, hgroup, 
+		menu, nav, output, ruby, section, summary,
+		time, mark, audio, video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;
+		}
+		/* HTML5 display-role reset for older browsers */
+		article, aside, details, figcaption, figure, 
+		footer, header, hgroup, menu, nav, section {
+			display: block;
+		}
+		body {
+			line-height: 1;
+		}
+		ol, ul {
+			list-style: none;
+		}
+		blockquote, q {
+			quotes: none;
+		}
+		blockquote:before, blockquote:after,
+		q:before, q:after {
+			content: '';
+			content: none;
+		}
+		table {
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+		/* css start*/
+		body {
+			font-family: Arial, Helvetica, Sans-Serif;
+		}
+		#container {
+			border: 1px solid #ddd;
+			border-radius: 1em;
+			padding: 2em 1em;
+			margin: 1em 1em;
+			background: #f1f1f1;
+		}
+		section h2 {
+			font-size: 100%;
+			font-weight: 200;
+			color: #aaa;
+			padding: 1em;
+			background: #fff;
+		}
+		.clock {
+			font-family: Roboto, sans-serif;
+			font-weight: 400;
+			font-size: 22vw;
+			line-height: 1.25;
+			color: #666;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<section id="clock1">
+			<h2>+1</h2>
+			<p class="clock"><span id="hours1">00</span>:<span id="minutes1">00</span>:<span id="seconds1">00</span></p>
+		</section>
+		<section id="clock0">
+			<h2>0</h2>
+			<p class="clock"><span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span></p>
+		</section>
+	</div>
+	<script type="text/javascript">
+		function refreshClock() {
+			var dt = new Date();
+			var year = dt.getFullYear();
+			var month = dt.getMonth() +1;
+			var date = dt.getDate();
+
+			var h = dt.getHours();
+			var m = dt.getMinutes();
+			var s = dt.getSeconds();
+
+			var ndt = new Date(dt.getTime()+1000);
+
+			var year1 = ndt.getFullYear();
+			var month1 = ndt.getMonth() +1;
+			var date1 = ndt.getDate();
+
+			var h1 = ndt.getHours();
+			var m1 = ndt.getMinutes();
+			var s1 = ndt.getSeconds();
+
+			var dateOptions = { year: 'numeric', month: '2-digit', day: '2-digit', weekday: 'long' };
+			var timeOptions = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
+
+			// console.log(year + '-' + month + '-' + date + ' ' + h + ':' + m + ':' + s);
+			// console.log(year1 + '-' + month1 + '-' + date1 + ' ' + h1 + ':' + m1 + ':' + s1);
+
+			// document.getElementById('hours').innerText = h;
+			// document.getElementById('minutes').innerText = m;
+			// document.getElementById('seconds').innerText = s;
+
+			// document.getElementById('hours1').innerText = h1;
+			// document.getElementById('minutes1').innerText = m1;
+			// document.getElementById('seconds1').innerText = s1;
+
+			document.getElementById('clock0').getElementsByTagName('h2')[0].innerText = dt.toLocaleDateString('zh-TW', dateOptions);
+			document.getElementById('clock1').getElementsByTagName('h2')[0].innerText = ndt.toLocaleDateString("zh-TW", dateOptions);
+
+			document.getElementById('clock0').getElementsByTagName('p')[0].innerText = dt.toLocaleTimeString('it-IT', timeOptions);
+			document.getElementById('clock1').getElementsByTagName('p')[0].innerText = ndt.toLocaleTimeString('it-IT', timeOptions);
+			document.title = ndt.toLocaleTimeString('it-IT', timeOptions) + ' (快一秒)';
+		}
+		
+		// var requestId = window.requestAnimationFrame(refreshClock);
+		var intervalId = window.setInterval(refreshClock, 100);
+	</script>
+</body>
+</html>
