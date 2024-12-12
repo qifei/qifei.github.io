@@ -262,7 +262,7 @@ p.name .fi {
 }
 
 .social_links li span.social_9gag {
-  background: url(../images/icon_9gag.svg) center center no-repeat;
+  background: url(../images/9gag.svg) center center no-repeat;
   background-size: 1em;
   filter: invert(100%);
 }
