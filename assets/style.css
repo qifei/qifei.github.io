@@ -1,6 +1,6 @@
 @charset "UTF-8";
 @import url("../HTML5/src/reset.css");
-@import url("../fonts/elegant_font/style.css");
+@import url("./elegant_font/style.css");
 
 body {
 	color: #000;
@@ -71,13 +71,13 @@ h1.title {
 	background-position: center center;
 }
 .avatar b {
-	background-image: url(../images/photo.jpg);
+	background-image: url(./images/photo.jpg);
 	background-size: contain;
 }
 .avatar i {
 	opacity: 0.4;
-	background-image: url(../images/github.png);
-	background-image: url(../images/github.svg), none;
+	background-image: url(./images/github.png);
+	background-image: url(./images/github.svg), none;
 	background-size: 60%;
 }
 @keyframes emerge {

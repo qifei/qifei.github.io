@@ -1,18 +1,18 @@
 ﻿/* learning CSS3 */
 
-@import url("reset.css");
+@import url("./reset.css");
 
 @font-face{
 	font-family: bookTitle;
-	src: url("UniversLTStd-LightUltraCn.otf");
+	src: url("./UniversLTStd-LightUltraCn.otf");
 }
 @font-face{
 	font-family: bookDescription;
-	src: url("vijaya.ttf");
+	src: url("./vijaya.ttf");
 }
 
 body {
-	background-color: #444;
+	background-color: #666;
 }
 #container {
 	margin: 0;
@@ -99,7 +99,7 @@ body {
 	position: absolute;
 	left: 80px;
 	top: 40px;
-	background-image: url(logo_press.png);
+	background-image: url(./images/logo_press.png);
 	background-position: left center;
 	background-repeat: no-repeat;
 	background-size: contain;

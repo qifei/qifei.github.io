@@ -1,10 +1,10 @@
-# CSS3 and HTML5 site
+# Welcome to my Homepage
 > https://qifei.github.io
 
 ### Thoughts
 
->1. Progressive enhancement or graceful degradation
->2. Animation CSS or Javascript
->3. SVG inline or as style
+> 1. 
+> 2. 
+> 3. 
 
-> 2017/01/13 04:28
+> 2024/12/13 13:16
