@@ -46,6 +46,9 @@ header {
 #top-search .form-group {
 	padding: 0;
 }
+.navbar#top-bar > * {
+	padding: 0;
+}
 .marquee-price {
 	overflow: hidden;
 }
