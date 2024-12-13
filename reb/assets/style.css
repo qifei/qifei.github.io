@@ -1,7 +1,4 @@
 /* Global */
-a {
-	/*color: #222;*/
-}
 body {
 	background-color: #F8F8F8;
 }
@@ -111,16 +108,16 @@ header .navbar-collapse {
 }
 
 #carousel #crs01 {
-	background-image: url(../images/carousel_01.jpg);
+	background-image: url(./images/carousel_01.jpg);
 }
 #carousel #crs02 {
-	background-image: url(../images/carousel_02.jpg);
+	background-image: url(./images/carousel_02.jpg);
 }
 #carousel #crs03 {
-	background-image: url(../images/carousel_03.jpg);
+	background-image: url(./images/carousel_03.jpg);
 }
 #carousel #crs04 {
-	background-image: url(../images/carousel_04.jpg);
+	background-image: url(./images/carousel_04.jpg);
 }
 
 #perspective {
@@ -149,16 +146,16 @@ header .navbar-collapse {
 }
 
 #psp01 {
-	background-image: url(../images/feature_01.png);
+	background-image: url(./images/feature_01.png);
 }
 #psp02 {
-	background-image: url(../images/feature_02.png);
+	background-image: url(./images/feature_02.png);
 }
 #psp03 {
-	background-image: url(../images/feature_03.png);
+	background-image: url(./images/feature_03.png);
 }
 #psp04 {
-	background-image: url(../images/feature_04.png);
+	background-image: url(./images/feature_04.png);
 }
 
 .products_title {
@@ -167,7 +164,7 @@ header .navbar-collapse {
 	font-family: PingFang TC;
 	font-weight: lighter;
 	font-size: 2em;
-	background: url(../images/product_topline.png) center bottom no-repeat;
+	background: url(./images/product_topline.png) center bottom no-repeat;
 	padding: 20px 0 20px;
 	margin: 0 0 20px;
 }
@@ -279,10 +276,10 @@ footer small {
 	height: 200px;
 }
 #news-banner .col-8 {
-	background: url(../images/newspaper.jpg) no-repeat;
+	background: url(./images/newspaper.jpg) no-repeat;
 }
 #news-banner .col-4 {
-	background: url(../images/coffee.jpg) no-repeat left bottom;
+	background: url(./images/coffee.jpg) no-repeat left bottom;
 }
 .location {
 	background-color: #ececec;
@@ -510,13 +507,13 @@ footer small {
 	background-color: #fff;
 }
 #productCarouselIndicators .carousel-indicators li.thumb-01 {
-	background-image: url(../images/carousel_thumb_01.jpg);
+	background-image: url(./images/carousel_thumb_01.jpg);
 }
 #productCarouselIndicators .carousel-indicators li.thumb-02 {
-	background-image: url(../images/carousel_thumb_02.jpg);
+	background-image: url(./images/carousel_thumb_02.jpg);
 }
 #productCarouselIndicators .carousel-indicators li.thumb-03 {
-	background-image: url(../images/carousel_thumb_03.jpg);
+	background-image: url(./images/carousel_thumb_03.jpg);
 }
 #productCarouselIndicators .carousel-caption {
 	bottom: auto;
@@ -626,7 +623,7 @@ footer small {
 /* Company */
 
 #banner-company {
-	background: url(../images/banner-company.jpg) center center no-repeat;
+	background: url(./images/banner-company.jpg) center center no-repeat;
 	padding: 60px 0 40px;
 }
 #banner-company .banner-inner {
@@ -694,7 +691,7 @@ footer small {
 }
 
 #banner-contact .banner-inner {
-	background: url(../images/banner-contact.jpg) center center no-repeat;
+	background: url(./images/banner-contact.jpg) center center no-repeat;
 	background-size: cover;
 	height: 960px;
 	position: absolute;
