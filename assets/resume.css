@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "../html5/src/reset.css";
+@import "../html5/assets/reset.css";
 @import "./elegant_font/style.css";
 
 @font-face {
