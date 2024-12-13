@@ -142,7 +142,11 @@
       // }
 
       if (!document.fullscreenElement) {
-        e.requestFullscreen().catch(err);
+        e.requestFullscreen().catch((err) => {
+          alert(
+            `Error attempting to enable fullscreen mode: ${err.message} (${err.name})`,
+          );
+        });
       } else {
         document.exitFullscreen();
       }
