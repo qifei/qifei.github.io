@@ -262,6 +262,7 @@ h1.title {
 		flex-grow: 0 1 0;
 		height: auto;
 		margin: 0;
+		padding: 0.5rem 0;
 		border-bottom: 1px solid #ddd;
 		border-radius: 0;
 		transform: translate(30rem,0);
@@ -301,17 +302,18 @@ h1.title {
 		display: block;
 		padding: 0 0.75rem;
 		font-size: 1.5rem;
-		line-height: 1.75rem;
+		line-height: 1.5;
 	}
 	.links li i {
 		display: block;
 		color: #ddd;
 		text-indent: 0;
 		font-size: 1.5rem;
-		line-height: 1.75rem;
+		line-height: 1.5rem;
 	}
 	.links li i::before {
 		font-family: ElegantIcons;
 		content: "5";
+		line-height: 1.75rem;
 	}
 }
