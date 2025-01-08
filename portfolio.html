@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio</title>
+  <!-- <script type="text/javascript" src="./assets/drawdown.js"></script> -->
+  <script type="text/javascript" src="./assets/markdown-it.min.js"></script>
+</head>
+<body>
+  <div class="doc"></div>
+  <script type="text/javascript">
+  const md = window.markdownit();
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', './portfolio.md');
+  xhr.onreadystatechange = function(e) {
+    if(e.target.readyState===4) {
+      console.log(xhr.responseText);
+      document.querySelector(".doc").innerHTML = md.render(xhr.responseText); //markdown(xhr.responseText);
+    }
+  }
+  xhr.send();
+  </script>
+</body>
+</html>
