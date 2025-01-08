@@ -14,7 +14,6 @@
   xhr.open('GET', './portfolio.md');
   xhr.onreadystatechange = function(e) {
     if(e.target.readyState===4) {
-      console.log(xhr.responseText);
       document.querySelector(".doc").innerHTML = md.render(xhr.responseText); //markdown(xhr.responseText);
     }
   }
