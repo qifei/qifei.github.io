@@ -1,10 +1,6 @@
-# Welcome to my Homepage
+# Homepage
 > https://qifei.github.io
 
-### Thoughts
+> ![HTML5 CSS3](https://img.shields.io/badge/HTML5-CSS3-green)
 
-> 1. 
-> 2. 
-> 3. 
-
-> 2024/12/13 13:16
+> 2026/04/11 02:47
