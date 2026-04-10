@@ -37,15 +37,9 @@ img {
 	}
 }
 
-h1.title {
-	font-size: 36px;
-	color: #666;
-	margin: 0px;
-	padding: 10px 0px;
-	font-family: Georgia, "Times New Roman", Times, serif;
-}
 #shutter {
-	margin: 1rem auto;
+	margin: 1.5rem auto 0;
+	padding: 0;
 	width: 128px;
 	height: 128px;
 	border-radius: 50%;
@@ -54,6 +48,8 @@ h1.title {
 .avatar {
 	display: block;
 	width: 256px;
+	margin: 0;
+	padding: 0;
 	transform: translate(-128px, 0);
 	transition: all 0.2s ease-in 0.1s;
 }
@@ -150,6 +146,7 @@ h1.title {
 
 .links {
 	margin: 2rem auto 0;
+	padding: 0;
 	display: flex;
 	flex-flow: row;
 	justify-content: center;
@@ -158,11 +155,10 @@ h1.title {
 .links li {
 	display: block;
 	position: relative;
-	font-size: 1.5rem;
-	height: 2rem;
-	width: 2rem;
+	width: 2.5rem;
+	height: 2.5rem;
+	font-size: 2rem;
 	color: #ccc;
-	border-radius: 50%;
 	transform: translate(0, 3rem);
 	animation: floatup 1.0s ease-out;
 	animation-fill-mode: forwards;
@@ -191,20 +187,20 @@ h1.title {
 }
 
 .links li:hover {
-	background-color: #999;
-	border-color: #333;
-	color: #fff;
-	transition: all 0.4s ease-out;
+	color: #333;
+	transition: all 0.3s ease-out;
 }
 .links li:hover a:link, .links li:hover a:visited, .links li:hover a:active {
-	color: #fff;
-	transition: all 0.4s ease-out;
+	color: #333;
+	transition: all 0.3s ease-out;
 }
 .links li span {
 	display: block;
-	padding: 0;
+	height: 100%;
 	font-weight: normal;
-	line-height: 2.25rem;
+	/* display: flex;
+	justify-content: center;
+	align-items: center; */
 }
 .links li a {
 	display: block;
@@ -213,18 +209,20 @@ h1.title {
 	left: 0;
 	font-family: "Myriad Pro", "Helvetica Neue", Arial, Verdana, Geneva, sans-serif;
 	font-weight: normal;
-	width: 1.5em;
-	height: 1.5em;
-	text-indent: -12000em;
+	width: 100%;
+	height: 100%;
+	text-indent: -20rem;
+	overflow: hidden;
 	text-align: left;
 	outline: none;
 	text-decoration: none;
+	line-height: 1;
 }
 .links li a:link {
 	color: #666;
 }
 .links li a:visited {
-	color: #888;
+	color: #666;
 }
 
 .footer {
@@ -254,6 +252,7 @@ h1.title {
 	}
 	.links li {
 		opacity: 1;
+		color: #999;
 		width: 100%;
 		display: flex;
 		flex-flow: row nowrap;
@@ -293,10 +292,10 @@ h1.title {
 		position: static;
 		width: 100%;
 		min-width: 10rem;
-		font-size: 1rem;
+		font-size: 1.25rem;
 		text-indent: 0;
-		height: 2rem;
-		line-height: 2rem;
+		height: 2.25rem;
+		line-height: 2.5rem;
 	}
 	.links li span {
 		display: block;
@@ -310,6 +309,8 @@ h1.title {
 		text-indent: 0;
 		font-size: 1.5rem;
 		line-height: 1.5rem;
+		padding-right: 0.5rem;
+		font-style: normal;
 	}
 	.links li i::before {
 		font-family: ElegantIcons;

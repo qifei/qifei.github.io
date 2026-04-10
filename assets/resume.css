@@ -242,7 +242,7 @@ p.name .fi {
   opacity: 0.5;
 }
 .social_links li:hover {
-  background-color: #999;
+  opacity: 1;
 }
 .social_links li span {
   display: inline-block;
