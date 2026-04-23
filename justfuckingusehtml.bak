@@ -210,16 +210,16 @@
   <h2>要交互？ HTML 自带，根本不用 JS</h2>
 
   <p>
-    你以为交互少不了你的宝贝 JavaScript？错，你知道个屁。 HTML 原生就有，比如这个折叠/展开：
+    你以为缺了你的宝贝 JavaScript 就没法交互了？错，你知道个屁。 HTML 原生就有，比如这个折叠/展开：
   </p>
 
   <details>
-    <summary>展他妈的开</summary>
-    <p>傻逼吓一跳 👻</p>
+    <summary>妈的展开</summary>
+    <p>呀，傻逼吓一跳 👻</p>
   </details>
 
   <p>
-    还要 popover？ 有，原生的，无需框架。 走你：
+    还要消息提示框？ 有，原生的，无需框架。 走你：
   </p>
 
   <button popovertarget="my-popover">点啊，怂货</button>
@@ -439,7 +439,7 @@
   </p>
   <p>
     <small>
-      灵感来自 → <a href="https://motherfuckingwebsite.com/" rel="nofollow noreferrer noopener">这屌毛</a>，他的 Web 开发知识大概比你这辈子能懂还要多。
+      灵感来自 → <a href="https://motherfuckingwebsite.com/" rel="nofollow noreferrer noopener">这屌毛</a>，在 Web 开发这块，估计你一辈子也难望其项背。
     </small>
   </p>
   <p>
