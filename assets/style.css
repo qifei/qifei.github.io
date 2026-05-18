@@ -57,6 +57,9 @@ img {
 	transform: translate(0, 0);
 	transition: all 0.2s ease-in 0.1s;
 }
+.avatar img {
+	width: 100%;
+}
 .avatar b, .avatar i {
 	display: inline-block;
 	width:128px;
