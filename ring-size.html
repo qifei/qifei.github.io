@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portfolio</title>
-  <script type="text/javascript" src="./assets/markdown-it.min.js"></script>
+  <title>如何选择戒指指圈的大小</title>
+  <script type="text/javascript" src="./assets/marked.umd.js"></script>
   <link rel="stylesheet" href="./assets/github-markdown.css">
   <style>
     .container {
@@ -33,12 +33,11 @@
     <article class="markdown-body"></article>
   </div>
   <script type="text/javascript">
-  const md = window.markdownit();
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', './portfolio.md');
+  xhr.open('GET', './ring-size.md');
   xhr.onreadystatechange = function(e) {
     if(e.target.readyState===4) {
-      document.querySelector(".markdown-body").innerHTML = md.render(xhr.responseText);
+      document.querySelector(".markdown-body").innerHTML = marked.parse(xhr.responseText);
     }
   }
   xhr.send();
